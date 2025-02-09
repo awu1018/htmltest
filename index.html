@@ -5,65 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Documentation</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        .container { max-width: 900px; margin: 40px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        h1, h2 { color: #2c3e50; }
-        pre { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 5px; overflow-x: auto; }
-        .nav { background: #34495e; padding: 10px; text-align: center; border-radius: 10px 10px 0 0; }
-        .nav a { color: white; text-decoration: none; padding: 10px 15px; display: inline-block; }
-        .nav a:hover { background: #2c3e50; border-radius: 5px; }
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: #333; /* Darker heading color */
+        }
+
+        nav {
+            background-color: #f0f0f0; /* Light gray background for navbar */
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Horizontal navigation */
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd; /* Separator between sections */
+            padding-bottom: 20px;
+        }
+
+        code {
+            background-color: #f5f5f5; /* Very light gray for code blocks */
+            padding: 10px;
+            border-radius: 5px;
+            display: block; /* Makes code a block element */
+            overflow-x: auto; /* Adds horizontal scroll if code overflows */
+            white-space: pre-wrap; /* Prevents code from overflowing horizontally */
+        }
+
+        .example {
+            border: 1px solid #ccc; /* Adds a border to example boxes */
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            text-align: center;
+            color: #777;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="nav">
-            <a href="#introduction">Introduction</a>
-            <a href="#installation">Installation</a>
-            <a href="#usage">Usage</a>
-            <a href="#api">API Reference</a>
-            <a href="#examples">Examples</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contributing">Contributing</a>
-            <a href="#license">License</a>
+
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#functions">Functions</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#examples">Examples</a></li>
+        </ul>
+    </nav>
+
+    <section id="introduction">
+        <h1>Introduction</h1>
+        <p>This document provides comprehensive information about the XYZ library.  It covers the core functionalities, classes, and provides usage examples.</p>
+    </section>
+
+    <section id="functions">
+        <h2>Functions</h2>
+
+        <h3><code>my_function(arg1, arg2)</code></h3>
+        <p>This function performs a specific task.  It takes two arguments:</p>
+        <ul>
+            <li><code>arg1</code>: The first argument (integer).</li>
+            <li><code>arg2</code>: The second argument (string).</li>
+        </ul>
+        <p>It returns a boolean value.</p>
+        <code class="language-python">
+            def my_function(arg1, arg2):
+                # Function implementation
+                return True
+        </code>
+
+        <h3><code>another_function()</code></h3>
+        <p>Another function description...</p>
+        <code class="language-javascript">
+            function another_function() {
+                // Function implementation
+                console.log("Hello");
+            }
+        </code>
+    </section>
+
+    <section id="classes">
+        <h2>Classes</h2>
+
+        <h3><code>MyClass</code></h3>
+        <p>Description of the class...</p>
+        <code class="language-java">
+            public class MyClass {
+                // Class implementation
+            }
+        </code>
+    </section>
+
+    <section id="examples">
+        <h2>Examples</h2>
+
+        <div class="example">
+            <h3>Example 1: Using <code>my_function</code></h3>
+            <p>Here's how to use the <code>my_function</code>:</p>
+            <code class="language-python">
+                result = my_function(10, "hello")
+                print(result)  # Output: True
+            </code>
         </div>
-        
-        <h1>Project Documentation</h1>
-        
-        <h2 id="introduction">Introduction</h2>
-        <p>Welcome to the documentation for [Your Project Name]. This guide will help you get started and understand the core features.</p>
-        
-        <h2 id="installation">Installation</h2>
-        <p>To install this project, run the following command:</p>
-        <pre><code>npm install your-package-name</code></pre>
-        
-        <h2 id="usage">Usage</h2>
-        <p>Here’s a simple example of how to use the project:</p>
-        <pre><code>const yourModule = require('your-package-name');
-yourModule.doSomething();</code></pre>
-        
-        <h2 id="api">API Reference</h2>
-        <p><strong>doSomething()</strong> - Executes the main function.</p>
-        
-        <h2 id="examples">Examples</h2>
-        <p>Here are a few examples demonstrating different features:</p>
-        <pre><code>// Example 1: Basic Usage
-yourModule.doSomething();
-// Example 2: Advanced Usage
-const result = yourModule.processData('input');
-console.log(result);</code></pre>
-        
-        <h2 id="faq">FAQ</h2>
-        <p><strong>Q: How do I install dependencies?</strong></p>
-        <p>A: Run <code>npm install</code> in the project root.</p>
-        
-        <p><strong>Q: Can I contribute?</strong></p>
-        <p>A: Yes! Fork the repository and submit a pull request.</p>
-        
-        <h2 id="contributing">Contributing</h2>
-        <p>We welcome contributions! Please fork the repository and submit a pull request.</p>
-        
-        <h2 id="license">License</h2>
-        <p>This project is licensed under the MIT License.</p>
-    </div>
+
+        <div class="example">
+            <h3>Example 2: Using <code>MyClass</code></h3>
+            <p>Instantiating and using <code>MyClass</code>:</p>
+            <code class="language-java">
+                MyClass obj = new MyClass();
+                // Use the object
+            </code>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 Your Company
+    </footer>
+
 </body>
 </html>
