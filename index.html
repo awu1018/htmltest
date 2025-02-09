@@ -4,67 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:400,700&family=Source+Code+Pro&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: sans-serif;
-            margin: 20px;
+            font-family: 'Roboto', sans-serif;
+            margin: 0; /* Remove default margin */
             line-height: 1.6;
+            color: #333; /* Darker text color */
+            background-color: #f8f9fa; /* Very light gray background */
         }
 
         h1, h2, h3 {
-            color: #333; /* Darker heading color */
+            color: #212529; /* Darker heading color */
         }
 
         nav {
-            background-color: #f0f0f0; /* Light gray background for navbar */
-            padding: 10px;
-            margin-bottom: 20px;
+            background-color: #343a40; /* Darker navbar */
+            color: #fff;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
         }
 
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex; /* Horizontal navigation */
+            display: flex;
+            justify-content: center; /* Center the navigation items */
         }
 
         nav li {
-            margin-right: 20px;
+            margin: 0 15px; /* Add spacing between nav items */
         }
 
         nav a {
             text-decoration: none;
-            color: #333;
-            font-weight: bold;
+            color: #fff;
+            font-weight: 500; /* Slightly bolder font-weight */
+            transition: color 0.3s ease; /* Smooth color transition on hover */
+        }
+
+        nav a:hover {
+            color: #f0ad4e; /* Gold color on hover */
         }
 
         section {
+            padding: 30px;
             margin-bottom: 30px;
-            border-bottom: 1px solid #ddd; /* Separator between sections */
-            padding-bottom: 20px;
+            background-color: #fff; /* White background for sections */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow on sections */
+            border-radius: 8px; /* Rounded corners for sections */
         }
 
         code {
-            background-color: #f5f5f5; /* Very light gray for code blocks */
-            padding: 10px;
-            border-radius: 5px;
-            display: block; /* Makes code a block element */
-            overflow-x: auto; /* Adds horizontal scroll if code overflows */
-            white-space: pre-wrap; /* Prevents code from overflowing horizontally */
+            font-family: 'Source Code Pro', monospace;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            display: block;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            margin-bottom: 15px;
         }
 
         .example {
-            border: 1px solid #ccc; /* Adds a border to example boxes */
-            padding: 10px;
-            margin-top: 10px;
+            border: 1px solid #dee2e6; /* Light gray border for examples */
+            padding: 20px;
+            margin-top: 15px;
             background-color: #f9f9f9;
+            border-radius: 8px;
         }
 
         footer {
             text-align: center;
             color: #777;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
+            padding: 20px;
+            background-color: #343a40; /* Darker footer */
+            color: #fff;
+        }
+
+        /* Responsive adjustments (example) */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column; /* Stack navigation vertically on smaller screens */
+                align-items: center;
+            }
+
+            nav li {
+                margin: 10px 0; /* Adjust margin for vertical nav */
+            }
+
+            section {
+                padding: 20px; /* Reduce padding on smaller screens */
+            }
         }
     </style>
 </head>
@@ -81,67 +115,7 @@
 
     <section id="introduction">
         <h1>Introduction</h1>
-        <p>This document provides comprehensive information about the XYZ library.  It covers the core functionalities, classes, and provides usage examples.</p>
-    </section>
-
-    <section id="functions">
-        <h2>Functions</h2>
-
-        <h3><code>my_function(arg1, arg2)</code></h3>
-        <p>This function performs a specific task.  It takes two arguments:</p>
-        <ul>
-            <li><code>arg1</code>: The first argument (integer).</li>
-            <li><code>arg2</code>: The second argument (string).</li>
-        </ul>
-        <p>It returns a boolean value.</p>
-        <code class="language-python">
-            def my_function(arg1, arg2):
-                # Function implementation
-                return True
-        </code>
-
-        <h3><code>another_function()</code></h3>
-        <p>Another function description...</p>
-        <code class="language-javascript">
-            function another_function() {
-                // Function implementation
-                console.log("Hello");
-            }
-        </code>
-    </section>
-
-    <section id="classes">
-        <h2>Classes</h2>
-
-        <h3><code>MyClass</code></h3>
-        <p>Description of the class...</p>
-        <code class="language-java">
-            public class MyClass {
-                // Class implementation
-            }
-        </code>
-    </section>
-
-    <section id="examples">
-        <h2>Examples</h2>
-
-        <div class="example">
-            <h3>Example 1: Using <code>my_function</code></h3>
-            <p>Here's how to use the <code>my_function</code>:</p>
-            <code class="language-python">
-                result = my_function(10, "hello")
-                print(result)  # Output: True
-            </code>
-        </div>
-
-        <div class="example">
-            <h3>Example 2: Using <code>MyClass</code></h3>
-            <p>Instantiating and using <code>MyClass</code>:</p>
-            <code class="language-java">
-                MyClass obj = new MyClass();
-                // Use the object
-            </code>
-        </div>
+        <p>This document provides comprehensive information about the XYZ library. It covers the core functionalities, classes, and provides usage examples.  We've made it look a bit nicer too!</p>
     </section>
 
     <footer>
